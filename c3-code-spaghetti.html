@@ -9,45 +9,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <style>
+
+        :root{
+            --button-colour: #3498db;
+            --button-colour-hover: #2980b9;
+            --product-card-title-colour: #2c3e50;
+            --special-card-colour: #e74c3c;
+            --product-card-background-colour: white;
+        }
+
+            /*Code pour former la base de la carte*/
         .product-card{
             width: 300px;
             border: 1px solid #b6b6be;
             padding: 20px;
             margin: 20px;
-            background: white;
+            background: var(--product-card-background-colour);
             border-radius: 8px;
         }
 
-        .product-title{
+            /*Change le titre de la carte*/
+        .product-card__title{
             font-size: 24px;
-            color: #2c3e50;
+            color: var(--product-card-title-colour);
             margin: 15px 0 10px 0;
             font-weight: 600;
         }
 
-        .product-image{
+            /*Change la taille de l'image dans la carte*/
+        .product-card__image{
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 4px;
         }
 
-        .product-description{
+            /*Change le texte qui décrit le produit sur la carte*/
+        .product-card__description{
             font-size: 14px;
             color: #7f8c8d;
             margin: 0 0 15px 0;
             line-height: 1.6;
         }
 
-        .product-price{
+            /*Change le prix du produit sur la carte*/
+        .product-card__price{
             font-size: 20px;
             color: #27ae60;
             font-weight: bold;
             margin: 0 0 15px 0;
         }
 
-        .product-button{
-            background: #3498db;
+            /*Change le bouton sur la carte*/
+        .product-card__button{
+            background: var(--button-colour);
             color: white;
             border: none;
             padding: 12px 24px;
@@ -57,215 +72,126 @@
             width: 100%;
         }
 
-        .product-button :hover{
-             background: #2980b9;
+            /*Change la couleur du bouton lors du hover*/
+        .product-card__button:hover{
+             background: var(--button-colour-hover);
         }
 
-          product-card-mini{
+        
+            /*S'occupe de la base de la petite carte*/
+        .product-minicard{
             width: 300px;
             border: 1px solid #b6b6be;
             padding: 20px;
             margin: 20px;
-            background: white;
+            background: var(--product-card-background-colour);
             border-radius: 8px;
             display: flex;
             gap: 15px;
         }
         
-
-        .product-title-mini{
+            /*Change le titre du produit sur la petite carte*/
+        .product-minicard__title{
              font-size: 14px;
-            color: #2c3e50;
+            color: var(--product-card-title-colour);
             margin: 0 0 8px 0;
         }
         
-        .product-image-mini{
+            /*Change la taille de l'image du produit sur la petite carte*/
+        .product-minicard__image{
              width: 100px;
             height: 100px;
             object-fit: cover;
             border-radius: 4px;
         }
-        
-        
-        
-        
-        body{
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            font-family: "Poppins", sans-serif;
-        }
-        .c {
-            width: 300px;
-            border: 1px solid #b6b6be;
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 8px;
-        }
-        .c img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        .c h2 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin: 15px 0 10px 0;
-            font-weight: 600;
-        }
-        .c p {
-            font-size: 14px;
+
+            /*Change le texte qui décrit le produit sur la petite carte*/
+        .product-minicard__description{
+            font-size: 10px;
             color: #7f8c8d;
-            margin: 0 0 15px 0;
-            line-height: 1.6;
+            margin: 0 0 17px 0;
         }
-        .c .p {
-            font-size: 20px;
-            color: #27ae60;
-            font-weight: bold;
-            margin: 0 0 15px 0;
-        }
-        .c button {
-            background: #3498db;
+
+            /*Change le bouton sur la petite carte*/
+        .product-minicard__button{
+            background: var(--button-colour);
             color: white;
             border: none;
             padding: 12px 24px;
             cursor: pointer;
             border-radius: 4px;
-            font-size: 14px;
-            width: 100%;
+            font-size: 10px;
+            width: 100%;  
         }
-        .c button:hover {
-            background: #2980b9;
+
+            /*Change le bouton sur la petite carte lors du hover*/
+        .product-minicard__button:hover{
+             background: var(--button-colour-hover);
         }
-        .badge {
+        
+            /*Met un badge sur la carte pour afficher un message*/
+        .product-card__badge{
             display: inline-block;
-            background: #e74c3c;
+            background: var(--special-card-colour);
             color: white;
             padding: 4px 8px;
             border-radius: 3px;
             font-size: 10px;
             position: absolute;
             top: 10px;
-            right: 10px;
-        }
-        .c2 {
-            width: 300px;
-            border: 1px solid #b6b6be;
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 8px;
-            display: flex;
-            gap: 15px;
-        }
-        .c2 img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        .c2 h3 {
-            font-size: 14px;
-            color: #2c3e50;
-            margin: 0 0 8px 0;
-        }
-        .c2 p {
-            font-size: 10px;
-            color: #7f8c8d;
-            margin: 0 0 17px 0;
-        }
-        .c2 button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 10px;
-            width: 100%;
-        }
-        .c2 button:hover {
-            background: #2980b9;
+            right: 10px;   
         }
 
-        .c3 {
+            /*Utiliser pour rendre une carte special*/
+        .product-card__special{
             width: 300px;
-            border: 3px solid #e74c3c;
+            border: 3px solid var(--special-card-colour);
             padding: 20px;
             margin: 20px;
             background: white;
             border-radius: 8px;
             position: relative;
         }
-        .c3 img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
+        
+        
+        
+            /*S'occupe du corps du code*/
+        body{
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            font-family: "Poppins", sans-serif;
         }
-        .c3 h2 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin: 15px 0 10px 0;
-            font-weight: 600;
-        }
-        .c3 p {
-            font-size: 14px;
-            color: #7f8c8d;
-            margin: 0 0 15px 0;
-            line-height: 1.6;
-        }
-        .p2 {
-            font-size: 20px;
-            color: #27ae60;
-            font-weight: bold;
-            margin: 0 0 15px 0;
-        }
-        .c3 button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 14px;
-            width: 100%;
-        }
-        .c3 button:hover {
-            background: #2980b9;
-        }
+       
     </style>
 </head>
 <body>
-    <div class="c">
+    <div class="product-card">
    
-        <img src="https://static.photos/technology/320x240/37" alt="Produit">
-        <h2>Nom du Produit 1</h2>
-        <p>Description courte du produit qui donne envie d'acheter.</p>
-        <div class="p">1149,99 $</div>
-        <button>Ajouter au panier</button>
+        <img class="product-card__image" src="https://static.photos/technology/320x240/37" alt="Produit">
+        <h2 class="product-card__title">Nom du Produit 1</h2>
+        <p class="product-card__description">Description courte du produit qui donne envie d'acheter.</p>
+        <div class="product-card__price">1149,99 $</div>
+        <button class="product-card__button">Ajouter au panier</button>
     </div>
 
 
-    <div class="c2">
-        <img src="https://static.photos/technology/100x100/130" alt="Mini produit">
+    <div class="product-minicard">
+        <img class="product-minicard__image" src="https://static.photos/technology/100x100/130" alt="Mini produit">
         <div>
-            <h3>Nom du produit mini 2</h3>
-            <p>Description rapide</p>
-            <button>Ajouter au panier</button>
+            <h3 class="product-minicard__title">Nom du produit mini 2</h3>
+            <p class="product-minicard__description">Description rapide</p>
+            <button class="product-minicard__button">Ajouter au panier</button>
         </div>
     </div>
 
-    <div class="c3">
-        <span class="badge">NOUVEAU</span>
-        <img src="https://static.photos/gaming/320x240/30" alt="Produit">
-        <h2>Nom du Produit 3</h2>
-        <p>Description courte du produit qui donne envie d'acheter.</p>
-        <div class="p2">1120,99 $</div>
-        <button>Ajouter au panier</button>
+    <div class="product-card__special">
+        <span class="product-card__badge">NOUVEAU</span>
+        <img class="product-card__image" src="https://static.photos/gaming/320x240/30" alt="Produit">
+        <h2 class="product-card__title">Nom du Produit 3</h2>
+        <p class="product-card__description">Description courte du produit qui donne envie d'acheter.</p>
+        <div class="product-card__price">1120,99 $</div>
+        <button class="product-card__button">Ajouter au panier</button>
     </div>
 </body>
 </html>
